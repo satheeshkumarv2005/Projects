@@ -19,7 +19,7 @@
                         <div class="form-row align-items-center">
                           <div class="col-sm-3 my-1">
                             <label class="sr-only" for="inlineFormInputName">Amount</label>
-                            <input type="number" class="form-control" id="inlineFormInputName" placeholder="Amount" name="amount">
+                            <input type="number" class="form-control" id="inlineFormInputName" required="required" placeholder="Amount" name="amount">
                           </div>
                           <div class="col-sm-3 my-1">
                             <label class="sr-only" for="inlineFormInputName">Remark</label>
