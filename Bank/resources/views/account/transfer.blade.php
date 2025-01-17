@@ -19,7 +19,7 @@
                         <div class="form-row align-items-center">
                             <div class="col-sm-3 my-1">
                                 <label for="account_id">Account Id</label>
-                                <select class="form-control" id="exampleFormControlSelect1" name="account_id">
+                                <select class="form-control" id="exampleFormControlSelect1" required="required" name="account_id">
                                     <option value="">-- select recipiend --</option>
                                     @foreach ($users as $user)
                                         @if ($user->id != Auth::user()->id)
@@ -32,15 +32,13 @@
                             </div>
                           <div class="col-sm-3 my-1">
                             <label class="sr-only" for="inlineFormInputName">Amount</label>
-                            <input type="number" class="form-control" id="inlineFormInputName" placeholder="Amount" name="amount">
+                            <input type="number" class="form-control" id="inlineFormInputName" required="required" placeholder="Amount" name="amount">
                           </div>
                           <div class="col-auto my-1">
                             <button type="submit" class="btn btn-primary">Transfer</button>
                           </div>
                         </div>
                       </form>
-
-
                 </div>
             </div>
         </div>
