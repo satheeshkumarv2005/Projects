@@ -20,7 +20,10 @@ return new class extends Migration
             $table->integer('amount')->default(0);
             $table->string('type');
             $table->string('transfer_to');
+            $table->integer('balance')->default(0);
             $table->timestamps();
+
+            $table->foreign('account_id')->references('id')->on('accounts')->ondelete('cascade');
         });
     }
 
