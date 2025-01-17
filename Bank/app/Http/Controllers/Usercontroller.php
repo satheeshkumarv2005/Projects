@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Models\Account;
 use App\Models\Transaction;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class Usercontroller extends Controller
 {
@@ -23,7 +24,7 @@ class Usercontroller extends Controller
     }
 
     public function statement(){
-        $statements = Transaction::all();
-        return view('account.statement', compact('statements'));
+        $transactions = Auth::user()->account->transaction->all();
+        return view('account.statement', compact('transactions'));
     }
 }
