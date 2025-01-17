@@ -25,7 +25,7 @@ Route::get('/', function () {
 Route::get('/email', function () {
 
     Mail::to('satheesh@gmail.com')->send(new WelcomeMail());
-    
+
     return new WelcomeMail();
 });
 
@@ -34,13 +34,13 @@ Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
-Route::get('/home/deposit', [Usercontroller::class, 'deposit'])->name('deposit');
+Route::get('/user/deposit', [Usercontroller::class, 'deposit'])->name('deposit');
 
-Route::get('/home/withdraw', [Usercontroller::class, 'withdraw'])->name('withdraw');
+Route::get('/user/withdraw', [Usercontroller::class, 'withdraw'])->name('withdraw');
 
-Route::get('/home/transfer', [Usercontroller::class, 'transfer'])->name('transfer');
+Route::get('/user/transfer', [Usercontroller::class, 'transfer'])->name('transfer');
 
-Route::get('/home/statement', [Usercontroller::class, 'statement'])->name('statement');
+Route::get('/user/statement', [Usercontroller::class, 'statement'])->name('statement');
 
 Route::post('user/account/deposit', [Accountcontroller::class, 'deposit'])->name('user.account.deposit');
 
